@@ -1,0 +1,15 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  transition: visibility, opacity;
+  will-change: visibility, opacity;
+  transition-duration: 250ms;
+  transition-timing-function: var(--main-trainsition);
+}

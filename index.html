@@ -1,0 +1,126 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>POPUP</title>
+    <link rel="stylesheet" href="styles/variables.css" />
+    <link rel="stylesheet" href="styles/utils.css" />
+    <link rel="stylesheet" href="styles/animations.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/media.css" />
+  </head>
+  <body>
+    <button class="outline btn" id="btn">Click me!</button>
+
+    <div id="overlay" class="fadeIn"></div>
+    <div id="popup" class="popup fadeIn">
+      <div class="close" id="close">
+        <img class="icon" src="icons/close.svg" alt="close popup" />
+      </div>
+      <main>
+        <div class="popup__gallery">
+          <div class="gallery__arrow arrow__left" data-gallery-direction="-1">
+            <img src="icons/chevron.svg" alt="previous image" />
+          </div>
+          <div class="gallery__arrow arrow__right" data-gallery-direction="1">
+            <img src="icons/chevron.svg" alt="next image" />
+          </div>
+
+          <div class="gallery__slider">
+            <!-- <div class="gallery__image display-block">
+              <img src="icons/61/1.png" alt="xbox one s picture" />
+            </div>
+            <div class="gallery__image">
+              <img src="icons/61/xbox.svg" alt="xbox one s picture" />
+            </div> -->
+          </div>
+        </div>
+
+        <div class="popup__info">
+          <section class="product__name" id="product__name"></section>
+
+          <section class="product__price" id="product__price"></section>
+
+          <section class="size">
+            <p class="info--title">Rozmiar:</p>
+
+            <div class="size__list" id="size__list">
+              <!-- <input type="radio" name="size" id="size_1" hidden />
+              <label for="size_1" class="outline size__button info--detail"
+                >Ram 32 GB</label
+              > -->
+            </div>
+          </section>
+
+          <section class="variant">
+            <p class="info--title">Wariant:</p>
+            <select
+              name="variant"
+              id="variant"
+              class="outline variant__select info--detail"
+            ></select>
+          </section>
+
+          <section class="status">
+            <div class="status__box">
+              <div>
+                <img
+                  id="available__icon"
+                  class="status--icon"
+                  src="icons/ok.svg"
+                  alt="Ok icon"
+                />
+              </div>
+              <div class="status__details">
+                <p id="available__text" class="info--title"></p>
+                <p id="available__quantity" class="info--title"></p>
+              </div>
+            </div>
+            <div class="status__box" id="delivery__box">
+              <div>
+                <img
+                  class="status--icon"
+                  src="icons/delivery-time-tool.svg"
+                  alt="Delivery time"
+                />
+              </div>
+              <div class="status__details">
+                <p class="info--title">Możemy wysyłac już dzisiaj!</p>
+                <a
+                  class="info--title status--link"
+                  href="http://google.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Sprawdź czasy i koszty wysyłki</a
+                >
+              </div>
+            </div>
+          </section>
+
+          <section class="buttons">
+            <div class="outline buttons__range">
+              <button data-range-action="dec" class="range">-</button>
+              <input
+                id="range__value"
+                class="range__value"
+                type="number"
+                name=""
+                min="1"
+                max="5"
+                placeholder="1"
+                value="1"
+              />
+              <button data-range-action="inc" class="range">+</button>
+            </div>
+            <button id="add__cart" class="outline btn buttons__cart">
+              Dodaj do koszyka
+            </button>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
